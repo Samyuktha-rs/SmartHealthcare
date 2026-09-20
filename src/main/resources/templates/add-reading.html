@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Healthcare | Add Reading</title>
+
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="brand">
+        <div class="brand-icon">✚</div>
+
+        <div>
+            <h2>SMART<span>HEALTH</span></h2>
+            <p>Healthcare System</p>
+        </div>
+    </div>
+
+    <nav>
+
+        <a href="/dashboard" class="nav-item">
+            <span>⌂</span>
+            Dashboard
+        </a>
+        <a href="/vitals" class="nav-item">
+            <span>♥</span>
+            Vitals
+        </a>
+
+        <a href="/history" class="nav-item">
+            <span>▥</span>
+            Health History
+        </a>
+
+        <a href="/add-reading" class="nav-item active">
+            <span>＋</span>
+            Add Reading
+        </a>
+
+        <a href="#" class="nav-item">
+            <span>⚠</span>
+            Alerts
+        </a>
+
+        <a href="#" class="nav-item">
+            <span>◉</span>
+            Profile
+        </a>
+
+        <a href="#" class="nav-item">
+            <span>⚙</span>
+            Settings
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <div class="secure">
+            🔒 Secure Platform
+        </div>
+
+        <a href="#" id="logoutButton">↪ Logout</a>
+
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+            <h1>Add Health Reading</h1>
+
+            <p>
+                Enter a new health reading.
+            </p>
+        </div>
+
+    </header>
+
+
+    <section class="welcome-card">
+
+        <div>
+
+            <p class="small-title">
+                HEALTH DATA
+            </p>
+
+            <h2>
+                Add New Reading
+            </h2>
+
+            <p>
+                The reading will be stored securely in Firebase.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="chart-card">
+
+            <form id="healthForm">
+
+                <div style="margin-bottom:20px;">
+
+                    <label>
+                        Heart Rate (BPM)
+                    </label>
+
+                    <input
+                            type="number"
+                            id="heartRate"
+                            placeholder="Example: 80"
+                            required
+                            min="30"
+                            max="220"
+                            style="width:100%; padding:12px; margin-top:8px;"
+                    >
+
+                </div>
+
+
+                <div style="margin-bottom:20px;">
+
+                    <label>
+                        Blood Pressure
+                    </label>
+
+                    <input
+                            type="text"
+                            id="bloodPressure"
+                            placeholder="Example: 120/80"
+                            required
+                            style="width:100%; padding:12px; margin-top:8px;"
+                    >
+
+                </div>
+
+
+                <div style="margin-bottom:20px;">
+
+                    <label>
+                        Oxygen Level (%)
+                    </label>
+
+                    <input
+                            type="number"
+                            id="oxygenLevel"
+                            placeholder="Example: 98"
+                            required
+                            min="50"
+                            max="100"
+                            step="0.1"
+                            style="width:100%; padding:12px; margin-top:8px;"
+                    >
+
+                </div>
+
+
+                <div style="margin-bottom:20px;">
+
+                    <label>
+                        Temperature (°C)
+                    </label>
+
+                    <input
+                            type="number"
+                            id="temperature"
+                            placeholder="Example: 36.7"
+                            required
+                            min="30"
+                            max="45"
+                            step="0.1"
+                            style="width:100%; padding:12px; margin-top:8px;"
+                    >
+
+                </div>
+
+
+                <button
+                        type="submit"
+                        style="padding:12px 25px; cursor:pointer;"
+                >
+                    Save Health Reading
+                </button>
+
+            </form>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        SmartHealthcare Monitoring System
+
+        <span>•</span>
+
+        Firebase Health Monitoring
+
+    </footer>
+
+</main>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="/js/firebase-config.js"></script>
+
+<script src="/js/add-reading.js"></script>
+<script src="/js/logout.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Healthcare | Vitals</title>
+
+    <link rel="stylesheet" href="/dashboard.css">
+
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">✚</div>
+
+        <div>
+            <h2>SMART<span>HEALTH</span></h2>
+            <p>Healthcare System</p>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="/dashboard" class="nav-item">
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+        <a href="/vitals" class="nav-item active">
+            <span>♥</span>
+            Vitals
+        </a>
+
+        <a href="/history" class="nav-item">
+            <span>▥</span>
+            Health History
+        </a>
+
+        <a href="/add-reading" class="nav-item">
+            <span>＋</span>
+            Add Reading
+        </a>
+
+        <a href="/alerts" class="nav-item">
+            <span>⚠</span>
+            Alerts
+        </a>
+
+        <a href="/profile" class="nav-item">
+            <span>◉</span>
+            Profile
+        </a>
+
+        <a href="/settings" class="nav-item">
+            <span>⚙</span>
+            Settings
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="secure">
+            🔒 Secure Platform
+        </div>
+
+        <a href="#" id="logoutButton">↪ Logout</a>
+
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>Vitals</h1>
+
+            <p>
+                View your latest health measurements.
+            </p>
+
+        </div>
+
+    </header>
+
+
+    <section class="welcome-card">
+
+        <div>
+
+            <p class="small-title">
+                HEALTH VITALS
+            </p>
+
+            <h2>
+                Latest Health Readings
+            </h2>
+
+            <p>
+                Your latest readings are retrieved from Firebase.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="health-grid">
+
+        <div class="health-card">
+
+            <div class="card-icon">
+                ♥
+            </div>
+
+            <div>
+                <p>Heart Rate</p>
+
+                <strong id="heartRateValue">--</strong>
+
+                <span>BPM</span>
+            </div>
+
+        </div>
+
+
+        <div class="health-card">
+
+            <div class="card-icon">
+                ◉
+            </div>
+
+            <div>
+                <p>Blood Pressure</p>
+
+                <strong id="bloodPressureValue">--</strong>
+
+                <span>mmHg</span>
+            </div>
+
+        </div>
+
+
+        <div class="health-card">
+
+            <div class="card-icon">
+                ◌
+            </div>
+
+            <div>
+                <p>Oxygen Level</p>
+
+                <strong id="oxygenLevelValue">--</strong>
+
+                <span>%</span>
+            </div>
+
+        </div>
+
+
+        <div class="health-card">
+
+            <div class="card-icon">
+                🌡
+            </div>
+
+            <div>
+                <p>Temperature</p>
+
+                <strong id="temperatureValue">--</strong>
+
+                <span>°C</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="chart-card">
+
+            <h2>
+                Latest Reading Information
+            </h2>
+
+            <p style="margin-top:10px;">
+                The values shown above represent the latest
+                demo health reading stored for your account.
+            </p>
+
+            <p id="readingTime"
+               style="margin-top:15px;">
+                Reading time: --
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        SmartHealthcare Monitoring System
+
+        <span>•</span>
+
+        Vitals
+
+    </footer>
+
+</main>
+
+
+<!-- Firebase -->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+
+<!-- Firebase Configuration -->
+
+<script src="/js/firebase-config.js"></script>
+
+
+<!-- Vitals JavaScript -->
+
+<script src="/js/vitals.js"></script>
+
+
+<!-- Logout -->
+
+<script src="/js/logout.js"></script>
+
+
+</body>
+
+</html>

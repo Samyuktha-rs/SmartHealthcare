@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Healthcare | Profile</title>
+
+    <link rel="stylesheet" href="/dashboard.css">
+
+</head>
+
+
+<body>
+
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">✚</div>
+
+        <div>
+            <h2>SMART<span>HEALTH</span></h2>
+            <p>Healthcare System</p>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="/dashboard" class="nav-item">
+            <span>⌂</span>
+            Dashboard
+        </a>
+
+
+        <a href="/vitals" class="nav-item">
+            <span>♥</span>
+            Vitals
+        </a>
+
+
+        <a href="/history" class="nav-item">
+            <span>▥</span>
+            Health History
+        </a>
+
+
+        <a href="/add-reading" class="nav-item">
+            <span>＋</span>
+            Add Reading
+        </a>
+
+
+        <a href="/alerts" class="nav-item">
+            <span>⚠</span>
+            Alerts
+        </a>
+
+
+        <a href="/profile" class="nav-item active">
+            <span>◉</span>
+            Profile
+        </a>
+
+
+        <a href="/settings" class="nav-item">
+            <span>⚙</span>
+            Settings
+        </a>
+
+    </nav>
+
+
+    <!-- ================= SIDEBAR BOTTOM ================= -->
+
+    <div class="sidebar-bottom">
+
+        <div class="secure">
+            🔒 Secure Platform
+        </div>
+
+
+        <a href="#" id="logoutButton" class="logout">
+            ↪ Logout
+        </a>
+
+    </div>
+
+</aside>
+
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>My Profile</h1>
+
+            <p>
+                View your SmartHealthcare account information.
+            </p>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= WELCOME ================= -->
+
+    <section class="welcome-card">
+
+        <div>
+
+            <p class="small-title">
+                ACCOUNT
+            </p>
+
+            <h2>
+                Your Profile
+            </h2>
+
+            <p>
+                Your account information is securely loaded
+                from Firebase Authentication.
+            </p>
+
+        </div>
+
+
+        <div class="date-box">
+
+            <span>
+                ACCOUNT STATUS
+            </span>
+
+            <strong style="color:#4ade80;">
+                ● Active
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= PROFILE CARD ================= -->
+
+    <section class="section">
+
+        <div class="chart-card profile-card">
+
+
+            <!-- PROFILE HEADER -->
+
+            <div class="profile-header">
+
+
+                <div class="profile-avatar">
+                    👤
+                </div>
+
+
+                <div class="profile-title">
+
+                    <h2 id="profileName">
+                        Loading...
+                    </h2>
+
+                    <p id="profileEmail">
+                        Loading...
+                    </p>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- DIVIDER -->
+
+            <div class="profile-divider"></div>
+
+
+
+            <!-- PROFILE INFORMATION -->
+
+            <div class="profile-info">
+
+
+                <!-- ACCOUNT STATUS -->
+
+                <div class="profile-info-item">
+
+                    <span class="profile-label">
+                        ACCOUNT STATUS
+                    </span>
+
+                    <strong class="profile-status">
+                        ● Active
+                    </strong>
+
+                </div>
+
+
+
+                <!-- EMAIL -->
+
+                <div class="profile-info-item">
+
+                    <span class="profile-label">
+                        EMAIL ADDRESS
+                    </span>
+
+                    <strong id="profileEmailDetails">
+                        Loading...
+                    </strong>
+
+                </div>
+
+
+
+                <!-- USER ID -->
+
+                <div class="profile-info-item">
+
+                    <span class="profile-label">
+                        USER ID
+                    </span>
+
+                    <strong id="profileUid">
+                        Loading...
+                    </strong>
+
+                </div>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= INFORMATION CARD ================= -->
+
+    <section class="section">
+
+        <div class="status-card">
+
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h2>
+                        Account Information
+                    </h2>
+
+                    <p>
+                        SmartHealthcare authentication details
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <span>
+                    Authentication
+                </span>
+
+                <strong class="green">
+                    Firebase
+                </strong>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <span>
+                    Account
+                </span>
+
+                <strong class="green">
+                    Active
+                </strong>
+
+            </div>
+
+
+            <div class="status-row">
+
+                <span>
+                    Security
+                </span>
+
+                <strong class="green">
+                    Protected
+                </strong>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        SmartHealthcare Monitoring System
+
+        <span>•</span>
+
+        Firebase Authentication
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- ================= FIREBASE ================= -->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+
+<!-- Firebase Configuration -->
+
+<script src="/js/firebase-config.js"></script>
+
+
+<!-- Profile JavaScript -->
+
+<script src="/js/profile.js"></script>
+
+
+<!-- Logout JavaScript -->
+
+<script src="/js/logout.js"></script>
+
+
+</body>
+
+</html>

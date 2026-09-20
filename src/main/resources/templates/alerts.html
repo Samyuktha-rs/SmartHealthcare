@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Healthcare | Alerts</title>
+
+    <link rel="stylesheet" href="/dashboard.css">
+</head>
+
+<body>
+
+<aside class="sidebar">
+
+    <div class="brand">
+        <div class="brand-icon">✚</div>
+
+        <div>
+            <h2>SMART<span>HEALTH</span></h2>
+            <p>Healthcare System</p>
+        </div>
+    </div>
+
+    <nav>
+
+        <a href="/dashboard" class="nav-item">
+            <span>⌂</span>
+            Dashboard
+        </a>
+        <a href="/vitals" class="nav-item">
+            <span>♥</span>
+            Vitals
+        </a>
+
+        <a href="/history" class="nav-item">
+            <span>▥</span>
+            Health History
+        </a>
+
+        <a href="/add-reading" class="nav-item">
+            <span>＋</span>
+            Add Reading
+        </a>
+
+        <a href="/alerts" class="nav-item active">
+            <span>⚠</span>
+            Alerts
+        </a>
+
+        <a href="#" class="nav-item">
+            <span>◉</span>
+            Profile
+        </a>
+
+        <a href="#" class="nav-item">
+            <span>⚙</span>
+            Settings
+        </a>
+
+    </nav>
+
+    <div class="sidebar-bottom">
+
+        <div class="secure">
+            🔒 Secure Platform
+        </div>
+
+        <a href="#" id="logoutButton">↪ Logout</a>
+
+    </div>
+
+</aside>
+
+
+<main class="main-content">
+
+    <header class="topbar">
+
+        <div>
+            <h1>Health Alerts</h1>
+
+            <p>
+                Review alerts generated from your latest readings.
+            </p>
+        </div>
+
+    </header>
+
+
+    <section class="welcome-card">
+
+        <div>
+
+            <p class="small-title">
+                HEALTH MONITORING
+            </p>
+
+            <h2>
+                Alerts & Notifications
+            </h2>
+
+            <p>
+                Your latest health reading is checked against the
+                configured demo thresholds.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2>
+                Current Alerts
+            </h2>
+
+            <span class="live-status">
+                ● FIREBASE DATA
+            </span>
+
+        </div>
+
+
+        <div class="chart-card">
+
+            <div id="alertsContainer">
+                <div id="alertsContainer">
+
+                    <div style="
+        padding:20px;
+        border-radius:12px;
+        background:rgba(255,255,255,0.04);
+        border:1px solid rgba(255,255,255,0.08);
+    ">
+
+                        <h3>Loading health data...</h3>
+
+                        <p style="margin-top:8px;">
+                            Checking your latest Firebase reading.
+                        </p>
+
+                    </div>
+
+                </div>
+
+                <p>
+                    Loading alerts...
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <footer>
+
+        SmartHealthcare Monitoring System
+
+        <span>•</span>
+
+        Health Alerts
+
+    </footer>
+
+</main>
+
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+<script src="/js/firebase-config.js"></script>
+
+<script src="/js/alerts.js"></script>
+<script src="/js/logout.js"></script>
+
+</body>
+
+</html>

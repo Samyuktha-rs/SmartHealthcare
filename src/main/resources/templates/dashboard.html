@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Smart Healthcare | Dashboard</title>
+
+    <link rel="stylesheet" href="/dashboard.css">
+
+</head>
+
+<body>
+
+<!-- ================= SIDEBAR ================= -->
+
+<aside class="sidebar">
+
+    <div class="brand">
+
+        <div class="brand-icon">
+            ✚
+        </div>
+
+        <div>
+            <h2>SMART<span>HEALTH</span></h2>
+            <p>Healthcare System</p>
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="/dashboard" class="nav-item active">
+            <span>⌂</span>
+            Dashboard
+        </a>
+        <a href="/vitals" class="nav-item">
+            <span>♥</span>
+            Vitals
+        </a>
+
+
+
+        <a href="/history" class="nav-item">
+            <span>▥</span>
+            Health History
+        </a>
+
+        <a href="/add-reading" class="nav-item">
+            <span>＋</span>
+            Add Reading
+        </a>
+
+        <a href="/alerts" class="nav-item">
+            <span>⚠</span>
+            Alerts
+        </a>
+
+        <a href="/profile" class="nav-item">
+            <span>◉</span>
+            Profile
+        </a>
+
+        <a href="/settings" class="nav-item">
+            <span>⚙</span>
+            Settings
+        </a>
+
+    </nav>
+
+
+    <div class="sidebar-bottom">
+
+        <div class="secure">
+            🔒 Secure Platform
+        </div>
+
+        <a href="#" id="logoutButton">↪ Logout</a>
+
+    </div>
+
+</aside>
+
+
+<!-- ================= MAIN CONTENT ================= -->
+
+<main class="main-content">
+
+
+    <!-- TOP BAR -->
+
+    <header class="topbar">
+
+        <div>
+
+            <h1>Health Dashboard</h1>
+
+            <p>
+                Monitor your health information in one place.
+            </p>
+
+        </div>
+
+
+        <div class="topbar-right">
+
+            <div class="notification">
+                🔔
+            </div>
+
+            <div class="profile-mini">
+
+                <div class="profile-circle">
+                    U
+                </div>
+
+                <div>
+                    <strong>User</strong>
+                    <small>Patient</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+
+
+    <!-- ================= WELCOME CARD ================= -->
+
+    <section class="welcome-card">
+
+        <div>
+
+            <p class="small-title">
+                WELCOME BACK
+            </p>
+
+            <h2>
+                Good Morning 👋
+            </h2>
+
+            <p>
+                Here's an overview of your current health status.
+            </p>
+
+        </div>
+
+
+        <div class="date-card">
+
+            <span>
+                Today
+            </span>
+
+            <strong id="currentDate">
+                Loading...
+            </strong>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= HEALTH OVERVIEW ================= -->
+
+    <section class="section">
+
+        <div class="section-heading">
+
+            <h2>
+                Health Overview
+            </h2>
+
+            <span class="live-status">
+                ● LIVE MONITORING
+            </span>
+
+        </div>
+
+
+        <div class="health-grid">
+
+
+            <!-- HEART RATE -->
+
+            <div class="health-card">
+
+                <div class="health-card-top">
+
+                    <div class="health-icon heart">
+                        ♥
+                    </div>
+
+                    <span class="status normal">
+                        Normal
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Heart Rate
+                </p>
+
+                <div class="health-value">
+
+                    <strong id="heartRateValue">
+                        78
+                    </strong>
+
+                    <span>
+                        BPM
+                    </span>
+
+                </div>
+
+                <small>
+                    Resting heart rate
+                </small>
+
+            </div>
+
+
+
+            <!-- BLOOD PRESSURE -->
+
+            <div class="health-card">
+
+                <div class="health-card-top">
+
+                    <div class="health-icon bp">
+                        BP
+                    </div>
+
+                    <span class="status normal">
+                        Normal
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Blood Pressure
+                </p>
+
+                <div class="health-value">
+
+                    <strong id="bloodPressureValue">
+                        120/80
+                    </strong>
+
+                    <span>
+                        mmHg
+                    </span>
+
+                </div>
+
+                <small>
+                    Systolic/Diastolic
+                </small>
+
+            </div>
+
+
+
+            <!-- OXYGEN -->
+
+            <div class="health-card">
+
+                <div class="health-card-top">
+
+                    <div class="health-icon oxygen">
+                        O₂
+                    </div>
+
+                    <span class="status normal">
+                        Normal
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Oxygen Level
+                </p>
+
+                <div class="health-value">
+
+                    <strong id="oxygenLevelValue">
+                        98
+                    </strong>
+
+                    <span>
+                        %
+                    </span>
+
+                </div>
+
+                <small>
+                    Blood oxygen saturation
+                </small>
+
+            </div>
+
+
+
+            <!-- TEMPERATURE -->
+
+            <div class="health-card">
+
+                <div class="health-card-top">
+
+                    <div class="health-icon temperature">
+                        °C
+                    </div>
+
+                    <span class="status normal">
+                        Normal
+                    </span>
+
+                </div>
+
+
+                <p>
+                    Temperature
+                </p>
+
+                <div class="health-value">
+
+                    <strong id="temperatureValue">
+                        36.7
+                    </strong>
+
+                    <span>
+                        °C
+                    </span>
+
+                </div>
+
+                <small>
+                    Body temperature
+                </small>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= CHART + HEALTH STATUS ================= -->
+
+    <section class="dashboard-grid">
+
+
+        <!-- ================= HEART RATE CHART ================= -->
+
+        <div class="chart-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h2>
+                        Heart Rate
+                    </h2>
+
+                    <p>
+                        Recent readings from Firebase
+                    </p>
+
+                </div>
+
+
+                <select id="chartRange">
+
+                    <option>
+                        Recent
+                    </option>
+
+                    <option>
+                        7 Days
+                    </option>
+
+                    <option>
+                        30 Days
+                    </option>
+
+                </select>
+
+            </div>
+
+
+            <!-- REAL CHART -->
+
+            <div style="height:280px; width:100%;">
+
+                <canvas id="heartRateChart"></canvas>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- ================= HEALTH STATUS ================= -->
+
+        <div class="status-card">
+
+            <div class="card-heading">
+
+                <div>
+
+                    <h2>
+                        Health Status
+                    </h2>
+
+                    <p>
+                        Current condition
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <div class="overall-status">
+
+                <div class="check-icon">
+                    ✓
+                </div>
+
+                <div>
+
+                    <strong>
+                        All systems normal
+                    </strong>
+
+                    <small>
+                        Your current health readings are within normal range.
+                    </small>
+
+                </div>
+
+            </div>
+
+
+            <div class="status-list">
+
+
+                <div class="status-row">
+
+                    <span>
+                        Heart Rate
+                    </span>
+
+                    <strong>
+                        Normal
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        Blood Pressure
+                    </span>
+
+                    <strong>
+                        Normal
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        Oxygen Level
+                    </span>
+
+                    <strong>
+                        Normal
+                    </strong>
+
+                </div>
+
+
+                <div class="status-row">
+
+                    <span>
+                        Temperature
+                    </span>
+
+                    <strong>
+                        Normal
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        SmartHealthcare Monitoring System
+
+        <span>
+            •
+        </span>
+
+        Firebase Health Monitoring
+
+    </footer>
+
+
+</main>
+
+
+
+<!-- ================= JAVASCRIPT ================= -->
+
+<!-- Firebase -->
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+
+
+<!-- Firebase Configuration -->
+
+<script src="/js/firebase-config.js"></script>
+
+
+<!-- Chart.js -->
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+
+<!-- Dashboard JavaScript -->
+
+<script src="/js/dashboard.js"></script>
+<script src="/js/logout.js"></script>
+
+
+<!-- Current Date -->
+
+<script>
+
+    const dateElement =
+        document.getElementById("currentDate");
+
+    const today = new Date();
+
+    dateElement.textContent =
+        today.toLocaleDateString(
+            "en-IN",
+            {
+                day: "2-digit",
+                month: "short",
+                year: "numeric"
+            }
+        );
+
+</script>
+
+
+</body>
+
+</html>
